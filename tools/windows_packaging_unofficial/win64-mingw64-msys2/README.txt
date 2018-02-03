@@ -27,11 +27,11 @@ your Windows PATH.
 Now the rest is automatic. Run this script in an MSYS2 shell. You can run it 
 directly from the web without needing to clone this git repository first:
 
-wget -O - https://raw.githubusercontent.com/Ardour/ardour/master/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-01-prepare.sh | sh
+wget -O - https://raw.githubusercontent.com/dreamcat4/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-01-prepare.sh | sh
 
 After that, run this other script in a MinGW64 MSYS2 shell:
 
-wget -O - https://raw.githubusercontent.com/Ardour/ardour/master/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-02-install.sh | sh
+wget -O - https://raw.githubusercontent.com/dreamcat4/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-02-install.sh | sh
 
 If it succeeds, you're done!
 
@@ -118,16 +118,18 @@ Other Examples:
 
 Run a set of locally cached build scripts instead of downloading fresh ones:
 
-wget -O - https://raw.githubusercontent.com/Ardour/ardour/master/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-01-prepare.sh | ARG1="-l" sh
-wget -O - https://raw.githubusercontent.com/Ardour/ardour/master/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-02-install.sh | ARG1="-l" sh
+wget -O - https://raw.githubusercontent.com/dreamcat4/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-01-prepare.sh | ARG1="-l" sh
+wget -O - https://raw.githubusercontent.com/dreamcat4/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-02-install.sh | ARG1="-l" sh
 
 *If you're downloading fresh scripts and it seems like the older versions are 
 running instead of the new ones, remove any existing build scripts in your 
 current working directory and try again.*
 
 
-Use the build scripts from Defcronyke's fork repository, they may be newer 
-than the ones currently available in the official Ardour repository:
+These build scripts are from Defcronyke's fork repository, the source of which can be found below. 
+Since the official Ardour repository does not seem to want to take this build folder.
+
+https://community.ardour.org/node/8963
 
 wget -O - https://raw.githubusercontent.com/defcronyke/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-01-prepare.sh | ARG1="-d" sh
 wget -O - https://raw.githubusercontent.com/defcronyke/ardour/win64-mingw-msys/tools/windows_packaging_unofficial/win64-mingw64-msys2/00-02-install.sh | ARG1="-d" sh
